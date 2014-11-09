@@ -46,16 +46,15 @@ $bgColor: #ffffea;
 
 .reveal{
 
-  .sizer {
-    height: 600px;
-    margin-top: -200px;
+  .tall {
+    height: 100%;
   }
 
   pre {
-    font-size: 1em;
+    font-size: 0.8em;
     code {
-      padding-top: 1em;
-      padding-bottom: 1em;
+      padding: 1em;
+      overflow: hidden;
     }
   }
 

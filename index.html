@@ -53,6 +53,9 @@
 
         <section><img alt="rails logo" src="./img/rails-logo.svg" height="600" class="plain" /></section>
         <section data-background="./img/dhh.jpg" data-background-size="80%"></section>
+        <section data-background="./img/dhh.jpg" data-background-size="80%" data-markdown class="tall">
+          > I have opinions
+        </section>
         <section><img alt="basecamp logo" src="./img/basecamp-logo.png" width="700" class="plain" /></section>
 
         <section><img alt="basecamp" src="./img/basecamp-screenshot-1.png" /></section>
@@ -89,34 +92,107 @@
           <p><small><a href="http://www.shopify.com/technology/15646068">www.shopify.com/technology/15646068</a></small></p>
         </section>
 
-        <section><img alt="mad-max" src="./img/mad-max.jpg" height="600" /></section>
+        <section class="tall"><img alt="mad-max" src="./img/mad-max.jpg" /></section>
 
         <section data-markdown>
           # Small deviations
         </section>
 
         <section data-markdown>
-          ## [RSpec](http://rspec.info/)
+          ## [PostgreSQL](http://www.postgresql.org/)
         </section>
 
-        <section data-background="./img/dhh.jpg" data-background-size="80%">
-          <div class="sizer">
-            <blockquote><p>I consider rspec to have the worst DSL of any major piece of Ruby software.</p></blockquote>
-          </div>
+        <section data-background="./img/dhh.jpg" data-background-size="80%" data-markdown class="tall">
+          > Relational Databases FTW
+        </section>
+
+        <section data-markdown>
+          ``` bash
+          $ rails new myapp --database=postgresql
+          ```
+        </section>
+
+        <section data-markdown>
+          ``` ruby
+          # Gemfile
+          gem 'sqlite3'
+          ```
+        </section>
+
+        <section data-markdown>
+          ``` ruby
+          # Gemfile
+          gem 'pg'
+          ```
+        </section>
+
+        <section data-markdown>
+          ## [CoffeeScript](http://coffeescript.org)
+        </section>
+
+        <section data-background="./img/dhh.jpg" data-background-size="80%" data-markdown class="tall">
+          > CoffeeScript is better than Javascript
         </section>
 
         <section data-markdown>
           ```ruby
-            group :development, :test do
-              gem 'rspec-rails', '~> 3.0.0'
-            end
+          # Gemfile
+          gem "coffee-rails"
+          ```
+        </section>
+
+        <section data-markdown>
+          ```ruby
+          # Gemfile
+          # gem "coffee-rails"
           ```
         </section>
 
         <section data-markdown>
           ```bash
-            rails generate rspec:install
+          $ mv myapp.coffee myapp.js
           ```
+        </section>
+
+        <section data-markdown>
+          ```bash
+          # Gemfile
+          # gem "coffee-rails"
+          ...
+          gem "turbolinks"# -> coffee-rails
+          ```
+        </section>
+
+        <section data-markdown>
+          ## [RSpec](http://rspec.info/)
+        </section>
+
+        <section data-background="./img/dhh.jpg" data-background-size="80%" data-markdown class="tall">
+          > I consider rspec to have the worst DSL of any major piece of Ruby software.
+        </section>
+
+        <section data-markdown>
+          ```ruby
+          # Gemfile
+          group :development, :test do
+            gem 'rspec-rails', '~> 3.0.0'
+          end
+          ```
+        </section>
+
+        <section data-markdown>
+          ```bash
+          rails generate rspec:install
+          ```
+        </section>
+
+        <section data-markdown>
+          ```bash
+          git clone github.com/rspec/rspec-rails
+          cloc rspec-rails
+          ```
+
+          ☞ ~120 ruby files, ~4600 LOC
         </section>
 
         <section data-markdown>

@@ -135,14 +135,13 @@ body {
 .reveal .slide-number {
   color: #3b759e; }
 
-.reveal .sizer {
-  height: 600px;
-  margin-top: -200px; }
+.reveal .tall {
+  height: 100%; }
 .reveal pre {
-  font-size: 1em; }
+  font-size: 0.8em; }
   .reveal pre code {
-    padding-top: 1em;
-    padding-bottom: 1em; }
+    padding: 1em;
+    overflow: hidden; }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin-bottom: 0.5em; }
 .reveal section[data-background] h1, .reveal section[data-background] h2, .reveal section[data-background] h3, .reveal section[data-background] h4, .reveal section[data-background] h5, .reveal section[data-background] h6 {
