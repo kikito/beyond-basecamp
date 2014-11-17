@@ -53,6 +53,10 @@
 
         <section><img alt="3Scale logo" src="./img/3scale.png" class="plain" /></section>
 
+        <section data-markdown data-background="#007777">
+          # Intro
+        </section>
+
         <section class="tall"><img alt="rails logo" src="./img/rails-logo.svg" class="plain" /></section>
         <section data-background="./img/dhh.jpg" data-background-size="80%"></section>
         <section data-background="./img/dhh.jpg" data-background-size="80%" data-markdown class="tall">
@@ -73,18 +77,19 @@
         <section><img alt="basecamp" src="./img/the-rails-4-way.jpg" /></section>
 
 
-        <section>
-          <div class="reveal">
-            <h2>Basecampy Apps</h2>
-            <ul>
-              <li class="fragment">One relational database + ActiveRecord</li>
-              <li class="fragment">Light on the client-side</li>
-              <li class="fragment">Conventions (helpers, erb, turbolinks, ...)</li>
-            </ul>
-          </div>
+        <section data-markdown>
+          ## Basecampy Apps
+
+          * One relational database + ActiveRecord
+          * Light on the client-side
+          * Conventions (helpers, erb, turbolinks, ...)
+
         </section>
 
-        <section data-markdown>
+        <section><img alt="mad-max" src="./img/mad-max.jpg" /></section>
+
+
+        <section data-markdown data-background="#007777">
           # Small deviations
         </section>
 
@@ -187,31 +192,215 @@
           ### ☞ ~120 ruby files, ~4600 LOC
         </section>
 
-        <section data-markdown>
-          # Non-basecampy app
-        </section>
+        <section><img alt="Graph 1" src="./img/graph1.svg" class="plain" width="800" /></section>
+        <section><img alt="Graph 2" src="./img/graph2.svg" class="plain" width="800" /></section>
+        <section><img alt="Graph 3" src="./img/graph3.svg" class="plain" width="800" /></section>
+        <section><img alt="Graph 4" src="./img/graph4.svg" class="plain" width="800" /></section>
 
-        <section data-markdown>
-          # Real-life example
+        <section data-markdown data-background="#007777">
+           # Real-life example
         </section>
 
         <section><img alt="APITools Logo" src="./img/apitools-logo.png" class="plain" width="800" /></section>
         <section><img alt="APITools Schema" src="./img/apitools-schema1.svg" class="plain" width="800" /></section>
         <section><img alt="APITools Schema" src="./img/apitools-schema2.svg" class="plain" width="800" /></section>
-        <section>http://api.myapp.com/foo/bar</section>
-        <section>http://myapp.apitools.com/foo/bar</section>
+        <section data-markdown>
+          ### api.myapp.com/foo
+
+          #⇩
+
+          ### myapp.apitools.com/foo
+        </section>
+        <section><img alt="APITools Schema" src="./img/apitools-schema3.svg" class="plain" width="800" /></section>
+        <section><img alt="APITools Schema" src="./img/apitools-schema4.svg" class="plain" width="800" /></section>
         <section><img alt="APITools Screenshot" src="./img/apitools-screenshot.png" width="800" /></section>
 
+        <section data-background="./img/flash.jpg" data-background-size="cover" data-markdown>
+          # Speed
+        </section>
+
+        <section><img alt="Nginx redis lua" src="./img/nginx-redis-lua.png" class="plain" width="800" /></section>
+
         <section data-markdown>
-          ## Concerns:
+          * Overhead order: ~20ms
+          * Roundtrip to our servers (worst case): 1s
+          * Opensource self-hosted version available
         </section>
 
         <section data-background="./img/worf.jpg" data-background-size="cover" data-markdown class="tall">
           # Security
         </section>
 
-        <section data-background="./img/flash.jpg" data-background-size="cover" data-markdown>
-          # Speed
+        <section><img alt="docker" src="./img/docker-logo.png" class="plain" width="800" /></section>
+
+        <section data-markdown>
+          1 nginx + 1 redis in 1 docker container =
+          ## ~ 6MB
+        </section>
+
+        <section data-markdown>
+          ## APItools monitor
+        </section>
+
+        <section data-markdown>
+          # ✓
+          ## Fast, Safe
+          ## Fun
+        </section>
+
+        <section data-markdown>
+          # ✘
+          ## Lots of DIY
+          ## Very Bleeding Edge
+        </section>
+
+        <section><img alt="brainslug" src="./img/brainslug1.png" class="plain" width="800" /></section>
+        <section><img alt="brainslug" src="./img/brainslug2.png" class="plain" width="800" /></section>
+
+        <section data-background="./img/people.jpg" data-background-size="cover" data-markdown>
+          # Multitenancy
+        </section>
+
+        <section data-background="./img/nixon.jpg" data-background-size="cover" data-markdown></section>
+
+        <section data-markdown>
+          ## Provisioning API
+          #### Divided into 3 parts:
+        </section>
+
+        <section data-markdown>
+          ### Restful API Server
+
+          #### Built with Sinatra & Redis
+
+          ``` bash
+          $ curl http:://nixonserver.com/status
+          => { "redis_connection" : true }
+          ```
+        </section>
+
+        <section data-markdown>
+          ### CLI client
+
+          #### Built with Thor
+
+          ``` bash
+          $ nixon assign af8bae 4
+          => Assigned container af8bae to account 4
+          ```
+        </section>
+
+        <section data-markdown>
+          ### Ruby client gem
+
+          ```ruby
+          # Gemfile
+          source 'https://usr:pwd@geminabox.3sca.net'
+          ...
+          gem 'nixon-client'
+
+          ...
+          # Some controller / service
+          nixon.accounts.put_to_sleep(slug_name)
+          ```
+
+        </section>
+
+        <section data-background="./img/nixon-schema.png" data-background-size="cover" data-markdown></section>
+
+        <section data-markdown>
+          # ✓
+          ## Versatile
+        </section>
+
+        <section data-markdown>
+          # ✘
+          ## Triple work
+          ## Naming
+        </section>
+
+        <section data-background="./img/brain.jpg" data-background-size="cover" data-markdown></section>
+
+        <section data-markdown>
+          ## Rails APP
+
+          * MySQL database
+          * Login access point
+          * Contains account info
+          * Connected with nixon via `nixon-client`
+          * Hosts backups
+        </section>
+
+        <section><img alt="brain screenshot" src="./img/brain-screenshot.png" width="800" /></section>
+        <section><img alt="brain code screenshot" src="./img/brain-code.png" height="600" /></section>
+
+        <section data-markdown>
+          # ✓
+          ## Small Classes
+          ## Easy to test
+        </section>
+
+        <section data-markdown>
+          # ✘
+          ## Many Classes
+          ## Naming
+        </section>
+
+        <section data-background="./img/routing.jpg" data-background-size="cover" data-markdown>
+          # Routing
+        </section>
+
+        <section data-markdown>
+          ### api.myapp.com/foo
+
+          #⇩
+
+          ### myapp.apitools.com/foo
+        </section>
+
+        <section data-background="./img/conrad.png" data-background-size="cover" data-markdown></section>
+
+        <section><img alt="Nginx redis lua" src="./img/nginx-redis-lua.png" class="plain" width="800" /></section>
+
+        <section data-markdown>
+          # ✓
+          ## Small
+          ## Routing
+        </section>
+
+        <section data-markdown>
+          # ✘
+          ## Nothing really
+        </section>
+
+        <section data-background="./img/team.jpg" data-markdown>
+          # All together
+        </section>
+
+        <section>
+          Fixme: Add metrics here
+        </section>
+
+        <section data-markdown data-background="#007777">
+          ## Conclusion
+        </section>
+
+        <section><img alt="Graph 2" src="./img/graph2.svg" class="plain" width="800" /></section>
+
+        <section data-markdown>
+          # ✓
+          ## Fixme: Add good
+        </section>
+
+        <section data-markdown>
+          # ✘
+          ## Fixme: Add bad
+        </section>
+
+        <section>
+          <img alt="shopify article" src="./img/shopify-admin.png" />
+
+          <p><small><a href="http://www.shopify.com/technology/15646068">www.shopify.com/technology/15646068</a></small></p>
         </section>
 
         <section data-markdown>
@@ -223,25 +412,10 @@
         </section>
 
         <section data-markdown>
-          ## Conclusion
-        </section>
-
-        <section>
-          <img alt="shopify article" src="./img/shopify-admin.png" />
-
-          <p><small><a href="http://www.shopify.com/technology/15646068">www.shopify.com/technology/15646068</a></small></p>
-        </section>
-
-        <section data-markdown>
           # THANK YOU!
         </section>
 
-        <section>
-          <h1>THE END</h1>
-        </section>
-
       </div>
-
     </div>
 
     <script src="lib/js/head.min.js"></script>
