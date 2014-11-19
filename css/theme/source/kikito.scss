@@ -36,7 +36,8 @@ $linkColor: #3b759e;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #134674;
 
-$bgColor: #ffffea;
+$altColor: #ffffea;
+$altLinkColor: lighten($linkColor, 30%);
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -63,13 +64,16 @@ $bgColor: #ffffea;
   }
   section{
     &[data-background] {
-      h1,h2,h3,h4,h5,h6 {
-        color: $bgColor;
+      h1,h2,h3,h4,h5,h6,p {
+        color: $altColor;
         text-shadow: 1px 1px 1px #666;
+      }
+      a {
+        color: $altLinkColor;
       }
 
       blockquote {
-        background: $bgColor;
+        background: $altColor;
         padding: 0.75em;
         border-radius: 10px;
         top: 50px;
@@ -77,13 +81,15 @@ $bgColor: #ffffea;
         border: 1px solid rgba(0,0,0,0.5);
         p {
           text-align: left;
+          color: $mainColor;
+          text-shadow: none;
         }
         &:after {
           content: '';
           position: absolute;
           border-style: solid;
           border-width: 15px 15px 0;
-          border-color: $bgColor transparent;
+          border-color: $altColor transparent;
           display: block;
           width: 0;
           z-index: 1;
